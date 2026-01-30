@@ -19,7 +19,6 @@ class MethodsTestCase(unittest.TestCase):
 
         methods = [
             *self.account_methods,
-            *self.device_methods,
             *self.group_methods,
             *self.status_methods,
             *self.log_methods,

@@ -18,11 +18,8 @@ def main():
         "outgoingAPIMessageWebhook": "yes",
         "stateWebhook": "yes",
         "incomingWebhook": "yes",
-        "deviceWebhook": "yes",
         "keepOnlineStatus": "yes",
         "pollMessageWebhook": "yes",
-        "incomingBlockWebhook": "yes",
-        "incomingCallWebhook": "yes",
         "editedMessageWebhook": "yes",
         "deletedMessageWebhook": "yes"
     }

@@ -9,11 +9,11 @@ def main():
     # If no argument, the messages for 24 hours are returned.
 
     print("Incoming messages in the last 72 hours:")
-    response = greenAPI.journals.lastIncomingMessages(4320)
+    response = greenAPI.journals.lastIncomingMessages()
     print(response.data)
 
     print("Outgoing messages in the last 72 hours:")
-    response = greenAPI.journals.lastOutgoingMessages(4320)
+    response = greenAPI.journals.lastOutgoingMessages()
     print(response.data)
 
 

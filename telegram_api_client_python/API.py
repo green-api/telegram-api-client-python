@@ -9,7 +9,6 @@ from requests.adapters import HTTPAdapter, Retry
 from .response import Response as GreenAPIResponse
 from .tools import (
     account,
-    device,
     groups,
     journals,
     marking,
@@ -18,8 +17,7 @@ from .tools import (
     sending,
     serviceMethods,
     webhooks,
-    partner,
-    statuses
+    partner
 )
 
 
@@ -35,8 +33,8 @@ class GreenApi:
             apiTokenInstance: str,
             debug_mode: bool = False,
             raise_errors: bool = False,
-            host: str = "https://4100.api.green-api.com/tgm",
-            media: str = "https://4100.media.green-api.com/tgm",
+            host: str = "https://4100.api.green-api.com",
+            media: str = "https://4100.api.green-api.com",
             host_timeout: float = 180, # sec per retry
             media_timeout: float = 10800, # sec per retry
     ):
@@ -65,7 +63,7 @@ class GreenApi:
         self.serviceMethods = serviceMethods.ServiceMethods(self)
         self.webhooks = webhooks.Webhooks(self)
 
-        self.logger = logging.getLogger("Account-api-client-python")
+        self.logger = logging.getLogger("telegram-api-client-python")
         self.__prepare_logger()
 
     def request(
