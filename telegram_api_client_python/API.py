@@ -1,8 +1,7 @@
-import json
-import logging
+import json, logging, aiohttp
+
 from typing import Any, NoReturn, Optional
 
-import aiohttp
 from requests import Response, Session
 from requests.adapters import HTTPAdapter, Retry
 

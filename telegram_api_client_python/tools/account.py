@@ -1,7 +1,7 @@
+import aiofiles
+
 from pathlib import Path
 from typing import Dict, TYPE_CHECKING, Optional, Union
-
-import aiofiles
 
 from ..response import Response
 

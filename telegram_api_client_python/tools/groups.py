@@ -1,7 +1,7 @@
+import aiofiles
+
 from pathlib import Path
 from typing import List, TYPE_CHECKING
-
-import aiofiles
 
 from ..response import Response
 

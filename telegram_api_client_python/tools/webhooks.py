@@ -1,5 +1,4 @@
-import asyncio
-import logging
+import asyncio, logging
 from typing import Any, Callable, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:

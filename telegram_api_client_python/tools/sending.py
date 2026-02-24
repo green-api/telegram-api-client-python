@@ -1,8 +1,5 @@
-import mimetypes
-import pathlib
+import mimetypes, pathlib, aiofiles
 from typing import Dict, List, Optional, TYPE_CHECKING, Union
-
-import aiofiles
 
 from ..response import Response
 
@@ -18,6 +15,8 @@ class Sending:
             self,
             chatId: str,
             message: str,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         The method is aimed for sending a text message to a personal or
@@ -39,6 +38,8 @@ class Sending:
             self,
             chatId: str,
             message: str,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
@@ -54,6 +55,8 @@ class Sending:
             path: str,
             fileName: Optional[str] = None,
             caption: Optional[str] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         The method is aimed for sending a file uploaded by form
@@ -84,6 +87,8 @@ class Sending:
             path: str,
             fileName: Optional[str] = None,
             caption: Optional[str] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
@@ -109,6 +114,8 @@ class Sending:
             urlFile: str,
             fileName: str,
             caption: Optional[str] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         The method is aimed for sending a file uploaded by URL.
@@ -131,6 +138,8 @@ class Sending:
             urlFile: str,
             fileName: str,
             caption: Optional[str] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
@@ -184,6 +193,8 @@ class Sending:
             chatId: str,
             latitude: float,
             longitude: float,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         The method is aimed for sending location message.
@@ -205,6 +216,8 @@ class Sending:
             chatId: str,
             latitude: float,
             longitude: float,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
@@ -218,6 +231,8 @@ class Sending:
             self,
             chatId: str,
             contact: Dict[str, Union[int, str]],
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         The method is aimed for sending a contact message.
@@ -238,6 +253,8 @@ class Sending:
             self,
             chatId: str,
             contact: Dict[str, Union[int, str]],
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
@@ -254,7 +271,9 @@ class Sending:
             message: str,
             options: List[Dict[str, str]],
             multipleAnswers: Optional[bool] = None,
-            isAnonymous: Optional[bool] = None
+            isAnonymous: Optional[bool] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         """
         This method is intended for sending messages with a poll to a
@@ -278,7 +297,9 @@ class Sending:
             message: str,
             options: List[Dict[str, str]],
             multipleAnswers: Optional[bool] = None,
-            isAnonymous: Optional[bool] = None
+            isAnonymous: Optional[bool] = None,
+            typingTime: Optional[int] = None,
+            typingType: Optional[str] = None,
     ) -> Response:
         request_body = self.__handle_parameters(locals())
 
